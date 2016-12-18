@@ -62,11 +62,11 @@ const actions = {
   setCardMap: ({ state, commit }) => {
     Math.seedrandom(state.card.id) // NOTE: Get same map by same seed of ramdom
     var map = [ // TOOD: Elastic more than
-      _.sample(_.range(1, 15), 5),
-      _.sample(_.range(16, 30), 5),
-      _.sample(_.range(31, 45), 5),
-      _.sample(_.range(46, 60), 5),
-      _.sample(_.range(61, 75), 5),
+      _.sample(_.range(1, 12), 5),
+      _.sample(_.range(13, 24), 5),
+      _.sample(_.range(25, 36), 5),
+      _.sample(_.range(37, 48), 5),
+      _.sample(_.range(49, 60), 5),
     ]
     map[2][2] = 0 // NOTE: Overwrite at Central // TODO: Compute central position
     var transposed = _.zip.apply(this, map)
